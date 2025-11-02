@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useWordStore = defineStore('word', {
   state: () => ({
-    word: ref("hey")
+    word: ref("")
   }),
   actions: {
     updateWord(word: string) {
