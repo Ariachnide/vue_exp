@@ -8,7 +8,10 @@
 
 <template>
   <h2>Text mod</h2>
-  <p>{{ store.word }}</p>
+  <p>Current word is: {{ store.word }}</p>
+  <input
+    :value="store.word"
+    @input="event => store.word = event.target.value">
 </template>
 
 <style scoped></style>
