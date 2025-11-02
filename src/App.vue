@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { useCounterStore } from '@/stores/counter'
   import { computed } from 'vue'
+  import Text from './Text.vue'
 
   const store = useCounterStore()
   const doubledCount = computed(() => store.count * 2)
@@ -24,6 +25,7 @@
   <button @click="store.increment()">--- Up ---</button>
   <button @click="store.reset()">--- Reset ---</button>
   <button @click="store.decrement()">--- Down ---</button>
+  <Text />
 </template>
 
 <style scoped></style>
