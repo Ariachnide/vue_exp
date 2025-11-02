@@ -11,7 +11,7 @@
   <p>Current word is: {{ store.word }}</p>
   <input
     :value="store.word"
-    @input="event => store.word = event.target.value">
+    @input="event => store.updateWord(event.target.value)">
 </template>
 
 <style scoped></style>
