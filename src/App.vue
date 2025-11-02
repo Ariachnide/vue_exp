@@ -1,6 +1,10 @@
 <script setup lang="ts">
-  import { useCounterStore } from './stores/counter';
-  const counter = useCounterStore()
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+  // import { useCounterStore } from './stores/counter';
+  // const counter = useCounterStore()
+
 </script>
 
 <template>
@@ -9,7 +13,7 @@
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
-  <p>
+  <!-- <p>
     test counter: {{ counter.count }}
   </p>
   <p>
@@ -18,7 +22,14 @@
   <button @click="counter.doubleCount()">--- Double ---</button>
   <button @click="counter.increment()">--- Up ---</button>
   <button @click="counter.reset()">--- Reset ---</button>
-  <button @click="counter.decrement()">--- Down ---</button>
+  <button @click="counter.decrement()">--- Down ---</button> -->
+  <p>
+    test counter: {{ store.count }}
+  </p>
+  <p>
+    counter doubled: {{ store.doubleCount }}
+  </p>
+  <button @click="store.increment()">--- Up ---</button>
 </template>
 
 <style scoped></style>
